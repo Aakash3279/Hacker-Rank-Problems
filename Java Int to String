@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       String s = Integer.toString(n);
+       
+    if(s.getClass().getSimpleName().equals("String")){
+       if(n >= -100 && n<= 100){
+           System.out.println("Good job");
+       }else{
+           System.out.println("Wrong answer");
+       }
+    }
+        
+       
+    }
+}
+/*
+You are given an integer n, you have to convert it into a string.
+
+If your code successfully converts  into a string  the code will print "Good job". Otherwise it will print "Wrong answer".
+
+ can range between -100 to 100 inclusive.
+
+*/
