@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int negSubarray(int arr[], int n) {
+        int count = 0;
+        
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += arr[j];
+                if (sum < 0) {
+                    count++;
+                }
+            }
+        }
+        
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        System.out.println(negSubarray(arr, n));
+    }
+}
+/*
+Sample Input
+5
+1 -2 4 -5 1
+
+Sample Output
+9
+
+Explanation
+There are nine negative subarrays of :[1,-2,4,-5,1]
+*/
