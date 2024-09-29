@@ -1,0 +1,32 @@
+    public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+        List<Integer> output = new ArrayList<>();
+        
+            int Alice = 0;
+            int bob = 0;
+        for(int i =0;i<a.size();i++){
+            if(a.get(i) > b.get(i)){
+                Alice++;
+            }else if(a.get(i) == b.get(i)){
+                
+            }else{
+                bob++;
+            }
+        }
+        output.add(Alice);
+        output.add(bob);
+        return output;
+        
+    }
+
+}
+/*
+Example
+
+a = [1, 2, 3]
+b = [3, 2, 1]
+
+For elements *0*, Bob is awarded a point because a[0] .
+For the equal elements a[1] and b[1], no points are earned.
+Finally, for elements 2, a[2] > b[2] so Alice receives a point.
+The return array is [1, 1] with Alice's score first and Bob's second.
+*/
